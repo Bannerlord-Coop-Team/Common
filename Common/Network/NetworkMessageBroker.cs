@@ -28,6 +28,8 @@ namespace Common.Network
     /// <inheritdoc cref="INetworkMessageBroker"/>
     public class NetworkMessageBroker : MessageBroker, INetworkMessageBroker
     {
+        public static NetworkMessageBroker Instance { get; private set; }
+
         /// <summary>
         /// Auto-wired dependency
         /// </summary>
@@ -35,6 +37,7 @@ namespace Common.Network
         public NetworkMessageBroker()
         {
             _instance = this;
+            Instance = this;
         }
 
         public void PublishNetworkEvent(NetPeer peer, INetworkEvent networkEvent)
