@@ -10,7 +10,7 @@ namespace Common.PacketHandlers
         Example,
         Test,
         Hero,
-        Movement
+        Movement,
     }
 
     public interface IPacket
