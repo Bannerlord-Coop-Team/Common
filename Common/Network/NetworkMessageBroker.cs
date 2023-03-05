@@ -34,6 +34,8 @@ namespace Common.Network
         /// Auto-wired dependency
         /// </summary>
         public INetwork Network { get; set; }
+
+        public static new NetworkMessageBroker Instance { get; private set; }
         public NetworkMessageBroker()
         {
             _instance = this;
